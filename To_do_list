@@ -1,0 +1,28 @@
+tasks = []
+while True:
+    print("TO DO LIST")
+    print("1. view tasks")
+    print("2. add a task")
+    print("3. removing a task")
+    print("4. exit")
+    choice = input("choose an option between 1-4 ")
+
+    if choice == "1":
+        for i in tasks:
+            print(i)
+    elif choice == "2":
+        task = input("enter the task to add ")
+        tasks.append(task)
+        print(task,"added to the list")
+    elif choice == "3":
+        task = input("enter the task to remove ")
+        tasks.remove(task)
+        print(task,"removed from the list")
+    elif choice == "4":
+        print("Goodbye")
+        break
+    else:
+        print("entered an invalid choice please select a valid one")
+    
+    
+

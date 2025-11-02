@@ -1,0 +1,27 @@
+import random
+
+def generate_username(full_name):
+    name_parts = full_name.split()
+    if len(name_parts)<2:
+        return "pleaes enter your full name(first and last)"
+    
+    first_name = name_parts[0].lower()
+    last_name = name_parts[-1].lower()
+
+    #basic_combinations
+    username_1 = first_name + last_name
+    username_2 = first_name[ :3]+last_name[-3: ]
+    username_3 = first_name + str(random.randint(10,80))
+    
+    #create_more_combinations
+
+
+
+
+    usernames = [username_1,username_2,username_3]
+    return random.choice(usernames)
+
+while True:
+    full_name = input("enter your full name ")
+    username = generate_username(full_name)
+    print(username)
